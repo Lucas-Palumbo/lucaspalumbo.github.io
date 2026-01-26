@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lucas Palumbo | Portfólio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+
+    header {
+      background: #020617;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    nav button {
+      background: #1e293b;
+      border: none;
+      color: white;
+      padding: 10px 16px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    nav button:hover {
+      background: #334155;
+    }
+
+    section {
+      display: none;
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h1, h2 {
+      color: #38bdf8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Lucas Cantão Palumbo</h1>
+  <p>Desenvolvedor Backend • Integração de Sistemas</p>
+
+  <nav>
+    <button onclick="show('sobre')">Sobre</button>
+    <button onclick="show('skills')">Tecnologias</button>
+    <button onclick="show('experiencia')">Experiência</button>
+    <button onclick="show('projetos')">Projetos</button>
+    <button onclick="show('contato')">Contato</button>
+  </nav>
+</header>
+
+<section id="sobre" class="active">
+  <h2>Sobre mim</h2>
+  <p>
+    Desenvolvedor com 2 anos de experiência em tecnologia, atuando com
+    desenvolvimento, integração de sistemas e bancos de dados.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Tecnologias</h2>
+  <ul>
+    <li>JavaScript • Python • C#</li>
+    <li>PostgreSQL • SQL Server</li>
+    <li>Node.js • Sequelize • ODBC Driver</li>
+    <li>Insomnia • Git • GitHub</li>
+  </ul>
+</section>
+
+<section id="experiencia">
+  <h2>Experiência</h2>
+  <p>
+    Netcontroll - Xmenu<br>
+    Estagiário → Técnico de Suporte Júnior (2 anos)
+  </p>
+</section>
+
+<section id="projetos">
+  <h2>Projetos</h2>
+  <p>Projetos em breve…</p>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <p>
+    📧 lucas.palumbo@outlook.com<br>
+    🔗 <a href="https://github.com/Lucas-Palumbo" target="_blank">GitHub</a><br>
+    🔗 <a href="https://www.linkedin.com/in/lucas-palumbo-488686108/" target="_blank">LinkedIn</a>
+  </p>
+</section>
+
+<script>
+  function show(id) {
+    document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
+</script>
+
+</body>
+</html>
