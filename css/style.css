@@ -77,23 +77,23 @@ body {
 /* SECTIONS */
 .section {
   display: none;
-  justify-content: center;     /* CENTRALIZA VERTICAL */
-  align-items: center;         /* CENTRALIZA HORIZONTAL */
-  text-align: center;
   width: 100%;
-  padding: 40px 20px;
+  height: 100%;
 }
 
 .section.active {
   display: flex;
-  flex-direction: column;
-  justify-content: center;     /* CENTRALIZA VERTICAL */
-  align-items: center;         /* CENTRALIZA HORIZONTAL */
-  text-align: center;
+  justify-content: center;   /* centraliza o container */
+  align-items: center;       /* centraliza vertical */
   animation: fadeIn 0.5s ease forwards;
 }
 
-
+.section-content {
+  width: 100%;
+  max-width: 1000px;
+  padding: 40px 20px;
+  text-align: center;
+}
 
 .section h2 {
   font-size: 2rem;
@@ -103,11 +103,12 @@ body {
 
 /* GRID & CARDS */
 .grid {
-  justify-items: center;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
+  justify-items: center; /* centraliza cards */
 }
+
 
 .card {
   background: #020617;
