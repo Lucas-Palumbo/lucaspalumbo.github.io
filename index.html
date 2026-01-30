@@ -1,120 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Lucas Palumbo | Portfólio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: #e5e7eb;
-    }
+  <meta charset="UTF-8" />
+  <title>Lucas Palumbo | Desenvolvedor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    header {
-      background: #020617;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 10px;
-    }
-
-    nav button {
-      background: #1e293b;
-      border: none;
-      color: white;
-      padding: 10px 16px;
-      cursor: pointer;
-      border-radius: 6px;
-    }
-
-    nav button:hover {
-      background: #334155;
-    }
-
-    section {
-      display: none;
-      padding: 30px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    section.active {
-      display: block;
-    }
-
-    h1, h2 {
-      color: #38bdf8;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <h1>Lucas Cantão Palumbo</h1>
-  <p>Desenvolvedor Backend • Integração de Sistemas</p>
+<header class="header">
+  <h1 class="fade-in">Lucas Cantão Palumbo</h1>
+  <p class="fade-in delay">Desenvolvedor Backend • Integração de Sistemas</p>
 
-  <nav>
-    <button onclick="show('sobre')">Sobre</button>
-    <button onclick="show('skills')">Tecnologias</button>
-    <button onclick="show('experiencia')">Experiência</button>
-    <button onclick="show('projetos')">Projetos</button>
-    <button onclick="show('contato')">Contato</button>
+  <nav class="nav fade-in delay-2">
+    <a href="#sobre">Sobre</a>
+    <a href="#skills">Tecnologias</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
   </nav>
 </header>
 
-<section id="sobre" class="active">
+<section id="sobre" class="section reveal">
   <h2>Sobre mim</h2>
   <p>
     Desenvolvedor com 2 anos de experiência em tecnologia, atuando com
-    desenvolvimento, integração de sistemas e bancos de dados.
+    desenvolvimento de sistemas, integração de APIs e bancos de dados
+    em ambientes produtivos.
   </p>
 </section>
 
-<section id="skills">
+<section id="skills" class="section reveal">
   <h2>Tecnologias</h2>
-  <ul>
-    <li>JavaScript • Python • C#</li>
-    <li>PostgreSQL • SQL Server</li>
-    <li>Node.js • Sequelize • ODBC Driver</li>
-    <li>Insomnia • Git • GitHub</li>
-  </ul>
+
+  <div class="grid">
+    <div class="card">JavaScript</div>
+    <div class="card">Python</div>
+    <div class="card">C#</div>
+    <div class="card">PostgreSQL</div>
+    <div class="card">SQL Server</div>
+    <div class="card">Node.js</div>
+    <div class="card">Sequelize</div>
+    <div class="card">ODBC Driver</div>
+    <div class="card">Insomnia</div>
+  </div>
 </section>
 
-<section id="experiencia">
-  <h2>Experiência</h2>
-  <p>
-    Netcontroll - Xmenu<br>
-    Estagiário → Técnico de Suporte Júnior (2 anos)
-  </p>
-</section>
-
-<section id="projetos">
+<section id="projetos" class="section reveal">
   <h2>Projetos</h2>
-  <p>Projetos em breve…</p>
+
+  <div class="grid">
+    <div class="card project">
+      <h3>NFCe Exporter</h3>
+      <p>Exportação de XML de NFC-e a partir de banco SQL Server.</p>
+      <span>Python • ODBC • SQL Server</span>
+    </div>
+
+    <div class="card project">
+      <h3>API de Gestão</h3>
+      <p>API REST para gerenciamento de dados.</p>
+      <span>Node.js • Sequelize • PostgreSQL</span>
+    </div>
+  </div>
 </section>
 
-<section id="contato">
+<section id="contato" class="section reveal">
   <h2>Contato</h2>
+  <p>📧 lucas.palumbo@outlook.com</p>
   <p>
-    📧 lucas.palumbo@outlook.com<br>
-    🔗 <a href="https://github.com/Lucas-Palumbo" target="_blank">GitHub</a><br>
-    🔗 <a href="https://www.linkedin.com/in/lucas-palumbo-488686108/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/Lucas-Palumbo" target="_blank">GitHub</a> |
+    <a href="https://www.linkedin.com/in/lucas-palumbo-488686108/" target="_blank">LinkedIn</a>
   </p>
 </section>
 
-<script>
-  function show(id) {
-    document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
-    document.getElementById(id).classList.add("active");
-  }
-</script>
+<footer class="footer">
+  © 2026 • Lucas Palumbo
+</footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
