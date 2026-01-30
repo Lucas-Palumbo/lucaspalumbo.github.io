@@ -92,8 +92,12 @@ body {
   width: 100%;
   max-width: 1000px;
   padding: 40px 20px;
-  text-align: center;
+
+  /* 🔥 ISSO RESOLVE */
+  margin: 0 auto;          /* centraliza o bloco */
+  text-align: center;      /* centraliza textos */
 }
+
 
 .section h2 {
   font-size: 2rem;
@@ -106,8 +110,11 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  justify-items: center; /* centraliza cards */
+
+  justify-content: center; /* centraliza a grid */
+  justify-items: center;   /* centraliza os cards */
 }
+
 
 
 .card {
