@@ -26,6 +26,9 @@ body {
 /* ÁREA DE CONTEÚDO (abas) */
 .content {
   position: relative;
+  justify-content: center;     /* CENTRALIZA VERTICAL */
+  align-items: center;         /* CENTRALIZA HORIZONTAL */
+  text-align: center;
   height: calc(100vh - 55vh);   /* ocupa o resto da tela */
   display: flex;
 }
@@ -74,6 +77,9 @@ body {
 /* SECTIONS */
 .section {
   display: none;
+  justify-content: center;     /* CENTRALIZA VERTICAL */
+  align-items: center;         /* CENTRALIZA HORIZONTAL */
+  text-align: center;
   width: 100%;
   padding: 40px 20px;
 }
