@@ -14,14 +14,15 @@ body {
 /* HEADER */
 .header {
   position: relative;
-  min-height: 100vh;
+  height: 70vh;          /* antes: min-height: 100vh */
   overflow: hidden;
   display: flex;
-  align-items: flex-start;   /* antes: center */
+  align-items: flex-start;
   justify-content: center;
   text-align: center;
-  padding-top: 120px;        /* controla o quanto sobe */
+  padding-top: 100px;
 }
+
 
 #circuit {
   position: absolute;
