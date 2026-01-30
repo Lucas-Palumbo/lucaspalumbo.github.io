@@ -17,9 +17,10 @@ body {
   min-height: 100vh;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-start;   /* antes: center */
   justify-content: center;
   text-align: center;
+  padding-top: 120px;        /* controla o quanto sobe */
 }
 
 #circuit {
