@@ -2,77 +2,81 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Lucas Palumbo | Desenvolvedor</title>
+  <title>Lucas Palumbo | Portfólio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header class="header">
-  <h1 class="fade-in">Lucas Cantão Palumbo</h1>
-  <p class="fade-in delay">Desenvolvedor Backend • Integração de Sistemas</p>
+  <canvas id="circuit"></canvas>
 
-  <nav class="nav fade-in delay-2">
-    <a href="#sobre">Sobre</a>
-    <a href="#skills">Tecnologias</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#contato">Contato</a>
-  </nav>
+  <div class="header-content">
+    <h1 class="fade-in">Lucas Cantão Palumbo</h1>
+    <p class="fade-in delay">Desenvolvedor Backend • Integração de Sistemas</p>
+
+    <nav class="nav fade-in delay-2">
+      <button onclick="showSection('sobre')">Sobre</button>
+      <button onclick="showSection('skills')">Tecnologias</button>
+      <button onclick="showSection('projetos')">Projetos</button>
+      <button onclick="showSection('contato')">Contato</button>
+    </nav>
+  </div>
 </header>
 
-<section id="sobre" class="section reveal">
-  <h2>Sobre mim</h2>
-  <p>
-    Desenvolvedor com 2 anos de experiência em tecnologia, atuando com
-    desenvolvimento de sistemas, integração de APIs e bancos de dados
-    em ambientes produtivos.
-  </p>
-</section>
+<main>
+  <section id="sobre" class="section active">
+    <h2>Sobre mim</h2>
+    <p>
+      Desenvolvedor com 2 anos de experiência em tecnologia, atuando com
+      desenvolvimento de sistemas, integração de APIs e bancos de dados
+      em ambientes produtivos.
+    </p>
+  </section>
 
-<section id="skills" class="section reveal">
-  <h2>Tecnologias</h2>
-
-  <div class="grid">
-    <div class="card">JavaScript</div>
-    <div class="card">Python</div>
-    <div class="card">C#</div>
-    <div class="card">PostgreSQL</div>
-    <div class="card">SQL Server</div>
-    <div class="card">Node.js</div>
-    <div class="card">Sequelize</div>
-    <div class="card">ODBC Driver</div>
-    <div class="card">Insomnia</div>
-  </div>
-</section>
-
-<section id="projetos" class="section reveal">
-  <h2>Projetos</h2>
-
-  <div class="grid">
-    <div class="card project">
-      <h3>NFCe Exporter</h3>
-      <p>Exportação de XML de NFC-e a partir de banco SQL Server.</p>
-      <span>Python • ODBC • SQL Server</span>
+  <section id="skills" class="section">
+    <h2>Tecnologias</h2>
+    <div class="grid">
+      <div class="card">JavaScript</div>
+      <div class="card">Python</div>
+      <div class="card">C#</div>
+      <div class="card">PostgreSQL</div>
+      <div class="card">SQL Server</div>
+      <div class="card">Node.js</div>
+      <div class="card">Sequelize</div>
+      <div class="card">ODBC Driver</div>
+      <div class="card">Insomnia</div>
     </div>
+  </section>
 
-    <div class="card project">
-      <h3>API de Gestão</h3>
-      <p>API REST para gerenciamento de dados.</p>
-      <span>Node.js • Sequelize • PostgreSQL</span>
+  <section id="projetos" class="section">
+    <h2>Projetos</h2>
+    <div class="grid">
+      <div class="card project">
+        <h3>NFCe Exporter</h3>
+        <p>Exportação de XML de NFC-e a partir de banco SQL Server.</p>
+        <span>Python • ODBC • SQL Server</span>
+      </div>
+
+      <div class="card project">
+        <h3>API de Gestão</h3>
+        <p>API REST com integração a banco de dados.</p>
+        <span>Node.js • Sequelize • PostgreSQL</span>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="contato" class="section reveal">
-  <h2>Contato</h2>
-  <p>📧 lucas.palumbo@outlook.com</p>
-  <p>
-    <a href="https://github.com/Lucas-Palumbo" target="_blank">GitHub</a> |
-    <a href="https://www.linkedin.com/in/lucas-palumbo-488686108/" target="_blank">LinkedIn</a>
-  </p>
-</section>
+  <section id="contato" class="section">
+    <h2>Contato</h2>
+    <p>📧 lucas.palumbo@outlook.com</p>
+    <p>
+      <a href="https://github.com/Lucas-Palumbo" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/lucas-palumbo-488686108/" target="_blank">LinkedIn</a>
+    </p>
+  </section>
+</main>
 
 <footer class="footer">
   © 2026 • Lucas Palumbo
