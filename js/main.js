@@ -5,7 +5,13 @@ function showSection(id) {
   });
 
   document.getElementById(id).classList.add('active');
+
+  window.scrollTo({
+    top: document.querySelector('.header').offsetHeight,
+    behavior: 'smooth'
+  });
 }
+
 
 /* ===== CIRCUITO ELETRÔNICO ===== */
 const canvas = document.getElementById('circuit');
