@@ -5,7 +5,7 @@
   <title>Lucas Palumbo | Portfólio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=1">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -33,9 +33,10 @@
     <div class="section-content">
       <h2>Sobre mim</h2>
       <p>
-        Desenvolvedor com 2 anos de experiência em tecnologia, atuando com
-        desenvolvimento de sistemas, integração de APIs e bancos de dados
-        em ambientes produtivos.
+        Desenvolvedor com experiência em integração de sistemas,
+        APIs REST, bancos de dados e automação de processos.
+        Atuação focada em backend, performance e soluções
+        para ambientes produtivos.
       </p>
     </div>
   </section>
@@ -51,7 +52,7 @@
         <div class="card">SQL Server</div>
         <div class="card">Node.js</div>
         <div class="card">Sequelize</div>
-        <div class="card">ODBC Driver</div>
+        <div class="card">ODBC</div>
         <div class="card">Insomnia</div>
       </div>
     </div>
@@ -61,17 +62,19 @@
     <div class="section-content">
       <h2>Projetos</h2>
       <div class="grid">
-        <div class="card project">
+
+        <div class="card project" onclick="openModal('nfce')">
           <h3>NFCe Exporter</h3>
-          <p>Exportação de XML de NFC-e a partir de banco SQL Server.</p>
-          <span>Python • ODBC • SQL Server</span>
+          <p>Exportação automática de XML de NFC-e.</p>
+          <span>Python • SQL Server</span>
         </div>
 
-        <div class="card project">
-          <h3>API de Gestão</h3>
-          <p>API REST com integração a banco de dados.</p>
-          <span>Node.js • Sequelize • PostgreSQL</span>
+        <div class="card project" onclick="openModal('goleo')">
+          <h3>Goleo</h3>
+          <p>Plataforma de partidas estilo Tonsser.</p>
+          <span>Node.js • PostgreSQL</span>
         </div>
+
       </div>
     </div>
   </section>
@@ -93,7 +96,15 @@
   © 2026 • Lucas Palumbo
 </footer>
 
-<script src="js/main.js"></script>
+<!-- MODAL -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="js/main.js?v=1"></script>
 
 </body>
 </html>
