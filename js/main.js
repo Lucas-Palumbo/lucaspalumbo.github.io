@@ -12,6 +12,60 @@ function showSection(id) {
   });
 }
 
+/* ===== PROJETOS ===== */
+const projects = {
+  nfce: {
+    title: "NFCe Exporter",
+    description: "Sistema profissional de exportação de XML de NFC-e a partir de banco SQL Server.",
+    details: `
+      <ul>
+        <li>Interface gráfica em Tkinter</li>
+        <li>Conexão via ODBC com SQL Server</li>
+        <li>Exportação em lote de documentos fiscais</li>
+        <li>Tratamento de exceções e logs</li>
+        <li>Compatível com PyInstaller</li>
+      </ul>
+    `,
+    tech: "Python • SQL Server • ODBC • Tkinter",
+    github: "https://github.com/Lucas-Palumbo"
+  },
+
+  goleo: {
+    title: "Goleo",
+    description: "Plataforma social de partidas de futebol inspirada no Tonsser.",
+    details: `
+      <ul>
+        <li>Cadastro e gerenciamento de partidas</li>
+        <li>Sistema de participantes</li>
+        <li>Timeline de eventos da partida</li>
+        <li>Upload de mídia</li>
+        <li>Avaliação de desempenho</li>
+        <li>Backend em Node.js com PostgreSQL</li>
+      </ul>
+    `,
+    tech: "Node.js • PostgreSQL • Sequelize • API REST",
+    github: "https://github.com/Lucas-Palumbo"
+  }
+};
+
+function openModal(id) {
+  const p = projects[id];
+
+  document.getElementById('modalBody').innerHTML = `
+    <h2>${p.title}</h2>
+    <p>${p.description}</p>
+    ${p.details}
+    <p><b>Tecnologias:</b> ${p.tech}</p>
+    <p><a href="${p.github}" target="_blank">Ver no GitHub</a></p>
+  `;
+
+  document.getElementById('projectModal').style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById('projectModal').style.display = "none";
+}
+
 /* ===== CIRCUITO ===== */
 const canvas = document.getElementById('circuit');
 const ctx = canvas.getContext('2d');
