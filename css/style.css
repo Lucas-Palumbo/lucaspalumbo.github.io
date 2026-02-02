@@ -196,3 +196,43 @@ a:hover {
     transform: translateY(0);
   }
 }
+
+/* ===== MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #020617;
+  border: 1px solid #38bdf8;
+  padding: 30px;
+  max-width: 750px;
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(56,189,248,0.4);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h2 {
+  color: #f472b6;
+  margin-bottom: 10px;
+}
+
+.modal-content ul {
+  margin: 10px 0 10px 20px;
+  text-align: left;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 26px;
+  color: #f472b6;
+}
