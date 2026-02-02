@@ -12,8 +12,7 @@ function showSection(id) {
   });
 }
 
-
-/* ===== CIRCUITO ELETRÔNICO ===== */
+/* ===== CIRCUITO ===== */
 const canvas = document.getElementById('circuit');
 const ctx = canvas.getContext('2d');
 
@@ -69,7 +68,7 @@ function connectParticles() {
       const dist = Math.sqrt(dx * dx + dy * dy);
 
       if (dist < 120) {
-        ctx.strokeStyle = 'rgba(56, 189, 248, 0.15)';
+        ctx.strokeStyle = 'rgba(56,189,248,0.15)';
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
