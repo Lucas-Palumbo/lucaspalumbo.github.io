@@ -6,9 +6,10 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #020617;
+  background: radial-gradient(circle at top, #0f172a, #020617 60%);
   color: #e5e7eb;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* ===== HEADER / HERO ===== */
@@ -20,6 +21,20 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+/* synthwave glow overlay */
+.header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(236, 72, 153, 0.15),
+    rgba(56, 189, 248, 0.05),
+    transparent
+  );
+  pointer-events: none;
 }
 
 #circuit {
@@ -39,11 +54,13 @@ body {
 .header h1 {
   font-size: 3rem;
   color: #38bdf8;
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
 }
 
 .header p {
   margin-top: 10px;
-  color: #94a3b8;
+  color: #c084fc;
+  text-shadow: 0 0 8px rgba(192, 132, 252, 0.5);
 }
 
 /* ===== NAV ===== */
@@ -52,17 +69,23 @@ body {
 }
 
 .nav button {
-  background: none;
-  border: none;
+  background: transparent;
+  border: 1px solid rgba(236, 72, 153, 0.4);
   color: #e5e7eb;
   font-size: 1rem;
   cursor: pointer;
-  margin: 0 12px;
-  transition: color 0.2s;
+  margin: 0 8px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
 }
 
 .nav button:hover {
-  color: #38bdf8;
+  color: #fff;
+  border-color: #ec4899;
+  box-shadow:
+    0 0 10px rgba(236, 72, 153, 0.6),
+    inset 0 0 6px rgba(236, 72, 153, 0.4);
 }
 
 /* ===== MAIN CONTENT ===== */
@@ -95,7 +118,8 @@ body {
 .section h2 {
   font-size: 2rem;
   margin-bottom: 25px;
-  color: #38bdf8;
+  color: #f472b6;
+  text-shadow: 0 0 10px rgba(244, 114, 182, 0.5);
 }
 
 /* ===== GRID ===== */
@@ -108,23 +132,37 @@ body {
 
 /* ===== CARDS ===== */
 .card {
-  background: #020617;
-  border: 1px solid #1e293b;
+  background: rgba(2, 6, 23, 0.9);
+  border: 1px solid rgba(56, 189, 248, 0.25);
   padding: 20px;
   border-radius: 12px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+  box-shadow:
+    0 0 18px rgba(56, 189, 248, 0.5),
+    0 20px 40px rgba(236, 72, 153, 0.15);
 }
 
 .project span {
   display: block;
   margin-top: 10px;
-  color: #94a3b8;
+  color: #a78bfa;
   font-size: 0.9rem;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.7);
 }
 
 /* ===== FOOTER ===== */
