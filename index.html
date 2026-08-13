@@ -2,109 +2,283 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Lucas Palumbo | Portfólio</title>
+  <meta name="description" content="Portfólio de Lucas Palumbo - Desenvolvedor Fullstack" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="css/style.css?v=1">
+  <title>Lucas Palumbo | Portfólio</title>
+
+  <link rel="stylesheet" href="css/style.css?v=2">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header class="header">
+
   <canvas id="circuit"></canvas>
 
+  <!-- SELETOR DE IDIOMA -->
+  <div class="language-selector">
+
+    <button
+      id="languageButton"
+      class="language-button"
+      onclick="toggleLanguageMenu()"
+      aria-label="Selecionar idioma"
+    >
+      🌐 <span id="currentLanguage">PT</span>
+      <span class="language-arrow">▾</span>
+    </button>
+
+    <div id="languageMenu" class="language-menu">
+
+      <button onclick="changeLanguage('pt')">
+        🇧🇷 Português
+      </button>
+
+      <button onclick="changeLanguage('en')">
+        🇺🇸 English
+      </button>
+
+      <button onclick="changeLanguage('es')">
+        🇪🇸 Español
+      </button>
+
+    </div>
+
+  </div>
+
   <div class="header-content">
-    <h1 class="fade-in">Lucas Palumbo</h1>
-    <p class="fade-in delay">Desenvolvedor Fullstack</p>
+
+    <h1 class="fade-in">
+      Lucas Palumbo
+    </h1>
+
+    <p class="fade-in delay" data-i18n="subtitle">
+      Desenvolvedor Fullstack
+    </p>
 
     <nav class="nav fade-in delay-2">
-      <button onclick="showSection('sobre')">Sobre</button>
-      <button onclick="showSection('skills')">Tecnologias</button>
-      <button onclick="showSection('projetos')">Projetos</button>
-      <button onclick="showSection('contato')">Contato</button>
+
+      <button
+        onclick="showSection('sobre')"
+        data-i18n="nav_about"
+      >
+        Sobre
+      </button>
+
+      <button
+        onclick="showSection('skills')"
+        data-i18n="nav_technologies"
+      >
+        Tecnologias
+      </button>
+
+      <button
+        onclick="showSection('projetos')"
+        data-i18n="nav_projects"
+      >
+        Projetos
+      </button>
+
+      <button
+        onclick="showSection('contato')"
+        data-i18n="nav_contact"
+      >
+        Contato
+      </button>
+
     </nav>
+
   </div>
+
 </header>
+
 
 <main class="content">
 
+  <!-- SOBRE -->
   <section id="sobre" class="section active">
+
     <div class="section-content">
-      <h2>Sobre mim</h2>
-      <p>
+
+      <h2 data-i18n="about_title">
+        Sobre mim
+      </h2>
+
+      <p data-i18n="about_text">
         Desenvolvedor com experiência em integração de sistemas,
         APIs REST, bancos de dados e automação de processos.
         Atuação focada em backend, performance e soluções
         para ambientes produtivos.
       </p>
+
     </div>
+
   </section>
 
+
+  <!-- TECNOLOGIAS -->
   <section id="skills" class="section">
+
     <div class="section-content">
-      <h2>Tecnologias</h2>
+
+      <h2 data-i18n="technologies_title">
+        Tecnologias
+      </h2>
+
       <div class="grid">
+
         <div class="card">JavaScript</div>
+
         <div class="card">Python</div>
+
         <div class="card">C#</div>
+
         <div class="card">PostgreSQL</div>
+
         <div class="card">SQL Server</div>
+
         <div class="card">Node.js</div>
+
         <div class="card">Sequelize</div>
+
         <div class="card">ODBC</div>
+
         <div class="card">Insomnia</div>
+
       </div>
+
     </div>
+
   </section>
 
+
+  <!-- PROJETOS -->
   <section id="projetos" class="section">
+
     <div class="section-content">
-      <h2>Projetos</h2>
+
+      <h2 data-i18n="projects_title">
+        Projetos
+      </h2>
+
       <div class="grid">
 
-        <div class="card project" onclick="openModal('nfce')">
+        <div
+          class="card project"
+          onclick="openModal('nfce')"
+        >
+
           <h3>NFCe Exporter</h3>
-          <p>Exportação automática de XML de NFC-e.</p>
-          <span>Python • SQL Server • ODBC Driver • TKinter</span>
+
+          <p data-i18n="nfce_short">
+            Exportação automática de XML de NFC-e.
+          </p>
+
+          <span>
+            Python • SQL Server • ODBC Driver • Tkinter
+          </span>
+
         </div>
 
-        <div class="card project" onclick="openModal('goleo')">
+
+        <div
+          class="card project"
+          onclick="openModal('goleo')"
+        >
+
           <h3>Goleo</h3>
-          <p>Plataforma de partidas de futebol estilo Tonsser.</p>
-          <span>Node.js • PostgreSQL • Sequelize • Insomnia</span>
+
+          <p data-i18n="goleo_short">
+            Plataforma de partidas de futebol estilo Tonsser.
+          </p>
+
+          <span>
+            Node.js • PostgreSQL • Sequelize • Insomnia
+          </span>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
+
+  <!-- CONTATO -->
   <section id="contato" class="section">
+
     <div class="section-content">
-      <h2>Contato</h2>
-      <p>📧 lucas.palumbo@outlook.com</p>
+
+      <h2 data-i18n="contact_title">
+        Contato
+      </h2>
+
       <p>
-        <a href="https://github.com/Lucas-Palumbo" target="_blank">GitHub</a> |
-        <a href="https://www.linkedin.com/in/lucas-palumbo-488686108/" target="_blank">LinkedIn</a>
+        📧 lucas.palumbo@outlook.com
       </p>
+
+      <p>
+
+        <a
+          href="https://github.com/Lucas-Palumbo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        |
+
+        <a
+          href="https://www.linkedin.com/in/lucas-palumbo-488686108/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+      </p>
+
     </div>
+
   </section>
 
 </main>
 
+
 <footer class="footer">
-  © 2026 • Lucas Palumbo
+
+  <span data-i18n="footer">
+    © 2026 • Lucas Palumbo
+  </span>
+
 </footer>
+
 
 <!-- MODAL -->
 <div id="projectModal" class="modal">
+
   <div class="modal-content">
-    <span class="close" onclick="closeModal()">×</span>
+
+    <span
+      class="close"
+      onclick="closeModal()"
+      aria-label="Fechar"
+    >
+      ×
+    </span>
+
     <div id="modalBody"></div>
+
   </div>
+
 </div>
 
-<script src="js/main.js?v=1"></script>
+
+<script src="js/main.js?v=2"></script>
 
 </body>
 </html>
